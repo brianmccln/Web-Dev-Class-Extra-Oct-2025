@@ -1,0 +1,112 @@
+/* prevent mobile browsers from changing font size  */
+html {
+    -moz-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+}
+body {
+    font-family: sans-serif;
+    margin: 0;
+    background-color: #fff;
+}
+h1, h2, h3 {
+    color: #e45c09;
+}
+h1 {
+    font-size: 28px; /* default: 32px */
+    /* RGB: R:228, G:92, B:9 */
+    line-height: 36px;
+}
+h2 {
+    font-size: 24px;
+}
+h3 {
+    font-size: 20px;
+}
+p, li {
+    color: #333;
+    line-height: 24px;
+    margin-bottom: 22px;
+}
+/* box items are 100% width of parent elem */
+/* box items are min ht, no content = 0 ht */
+/* header, nav, main, footer {
+    border: 2px dotted #888;
+    padding: 10px;
+    margin: 5px;
+    margin-bottom: 30px;
+} */
+header {
+    border: none;
+    border-bottom: 1px solid #ccc;
+    padding: 20px 0 20px 10px;
+    text-align: center;
+    margin-bottom: 22px;
+    /* background-color: pink; */
+}
+nav {
+    text-align: center;
+}
+nav ul {
+    /* get rid of btn types */
+    list-style-type: none;
+    /* get rid of list's default m & p */
+    margin: 0;
+    padding: 0;
+}
+nav li {
+    /* make list items go horiz */
+    display: inline-block;
+}
+nav a {
+    /* expand clickable area of link */
+    padding: 15px;
+    font-size: 13px;
+    /* background-color: #000; */
+    /* color: #fff; */
+}
+nav a:link {
+    /* color: #1311d7; */
+    /* get rid of link's default underline */
+    text-decoration: none;
+    text-transform: uppercase;
+    /* add space between horiz items */
+    margin-right: 10px;
+}
+nav a:hover, nav a:focus {
+    /* restore underline to link on mouseover */
+    text-decoration: underline;
+    /* change color on mouseover */
+    color: #e45c09;
+}
+nav a:visited {
+    color: #13aad7;
+    background-color: aqua;
+}
+main {
+    background-color: #eee;
+    width: 80%;
+    max-width: 800px;
+    margin: 0 auto 30px; /* shorthand for 0 auto 0 auto where 4 values are : Top Btm, Rt, Lt */
+}
+main img {
+    max-width: 100%;
+}
+footer {
+    text-align: center;
+    color: #999;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Media Query Break Point -- Toggle to this 
+when browser gets wide */
+@media (min-width: 600px) {
+    body {
+        background-color: #ddf;
+    }
+    h1 {
+        background-color: #cc3;
+    }
+}
